@@ -29,11 +29,11 @@ section
 article
 	{
 		float: left;
-		width: 200px;
+		max-width: 200px;
 		margin: 0 1% 0.5% 0;	 
 		display: inline-block;
 		background-color: rgba(255,255,255,0.4);
-		height: 200px;
+		max-height: 200px;
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		border-color: white;
@@ -83,18 +83,18 @@ p.X
 
 .contenedor h2
 	{
+		 font-size: 6.5vw;
 		 padding: 10% 0 5% 0;
-		 font-size: 5vw;
 		 font-family: 'Permanent Marker', cursive;
 		 color: white;
 	}
 
 .contenedor input
 	{
-		margin: 0% 40%;
-		width: 20%;
+		font-size: 3vw;
+		width: 30%;
+		margin: 0% 35%;
 		padding: 2%;
-		font-size: 2vw;
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		background-color: rgba(0,255,0,0.5);
@@ -106,4 +106,132 @@ p.X
 .contenedor input:hover
 	{
 		background-color: rgba(32,124,17,1);
-	}	
+	}
+
+@media screen and (max-width:1030px)
+	{
+		article
+			{
+				max-width: 175px;
+				max-height: 175px;
+			}
+
+		article p
+			{
+				width: 175px;
+			}
+
+		section
+			{
+				width: 70%;
+				margin: 8% 15% 0 20%;
+			}
+
+		.contenedor h2
+			{
+				padding: 20% 0 5% 0;
+			}
+		
+	}
+
+@media screen and (max-width:890px)
+	{
+		article
+			{
+				max-width: 150px;
+				max-height: 150px;
+			}
+
+		article p
+			{
+				width: 150px;
+			}
+
+		section
+			{
+				margin: 12% 20% 0 20%;
+			}
+
+		.contenedor h2
+			{
+				padding: 25% 0 5% 0;
+			}
+		
+	}
+
+@media screen and (max-width:775px)
+	{
+		article
+			{
+				max-width: 150px;
+				max-height: 150px;
+			}
+
+		article p
+			{
+				width: 150px;
+			}
+
+		section
+			{
+				width: 80%;
+				margin: 16% 18% 0 18%;
+			}
+
+		.contenedor h2
+			{
+				padding: 32% 0 5% 0;
+			}
+		
+	}
+
+
+@media screen and (max-width:625px)
+	{
+		article
+			{
+				max-width: 120px;
+				max-height: 120px;
+			}
+
+		article p
+			{
+				width: 120px;
+			}
+
+		section
+			{
+				margin: 25% 18% 0 18%;
+			}
+
+		.contenedor h2
+			{
+				padding: 40% 0 5% 0;
+			}
+		
+	}
+
+@media screen and (max-width:480px)
+	{
+		article
+			{
+				max-width: 100px;
+				max-height: 100px;
+			}
+
+		article p
+			{
+				width: 100px;
+			}
+
+		section
+			{
+				width: 80%;
+				margin: 35% 10% 0 18%;
+			}
+
+		.contenedor h2
+			{
+				padding: 50% 0 5% 0;
+			}
+	}  

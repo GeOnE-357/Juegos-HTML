@@ -13,7 +13,7 @@ function principal()
 
 		function marcar(e)
 			{
-				
+				/*Funcion que pone la marca de "O" o "X".*/
 				var a=window.event || e;
 				var pos = a.target || a.srcElement;
 				var p=document.getElementById(pos.id);
