@@ -13,6 +13,7 @@
 body
 	{
 		background-color: #EDC10D;
+		height: 100%;
 	}
 
 h2, p
@@ -22,18 +23,18 @@ h2, p
 
 section
 	{
-		width: 60%;
-		margin: 2% 13% 0 27%;
+		width: 50%;
+		margin: 2% auto;
 	}
 
 article
 	{
 		float: left;
-		max-width: 200px;
+		width: 200px;
 		margin: 0 1% 0.5% 0;	 
 		display: inline-block;
 		background-color: rgba(255,255,255,0.4);
-		max-height: 200px;
+		height: 200px;
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		border-color: white;
@@ -47,8 +48,8 @@ article:hover
 article p
 	{
 		text-align: center;
-		width: 200px;
-		height: 170px;
+		width: 100%;
+		height: 200px;
 		padding: 30px 0 0 0;
 		display: inline-block;
 		font-size: 8vw;
@@ -77,23 +78,27 @@ p.X
 	right: 0;
 	left: 0;
 	bottom: 0;
+	padding:5% 10%;
 	background-color: rgba(0,0,0,0.5);
+	text-align: center;
 	/*display: none;*/
 	}
 
 .contenedor h2
 	{
 		 font-size: 6.5vw;
-		 padding: 10% 0 5% 0;
+		 width: 80%;
 		 font-family: 'Permanent Marker', cursive;
 		 color: white;
+
 	}
 
 .contenedor input
 	{
 		font-size: 3vw;
 		width: 30%;
-		margin: 0% 35%;
+		float: left;
+		margin: 0 25%;
 		padding: 2%;
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
@@ -108,130 +113,49 @@ p.X
 		background-color: rgba(32,124,17,1);
 	}
 
-@media screen and (max-width:1030px)
+@media screen and (max-width:1040px)
 	{
-		article
-			{
-				max-width: 175px;
-				max-height: 175px;
-			}
-
-		article p
-			{
-				width: 175px;
-			}
-
 		section
 			{
 				width: 70%;
-				margin: 8% 15% 0 20%;
-			}
-
-		.contenedor h2
-			{
-				padding: 20% 0 5% 0;
-			}
-		
+				margin: 3% auto;
+			}			
 	}
 
-@media screen and (max-width:890px)
+@media screen and (max-width:900px)
 	{
-		article
-			{
-				max-width: 150px;
-				max-height: 150px;
-			}
-
-		article p
-			{
-				width: 150px;
-			}
-
-		section
-			{
-				margin: 12% 20% 0 20%;
-			}
-
-		.contenedor h2
-			{
-				padding: 25% 0 5% 0;
-			}
-		
-	}
-
-@media screen and (max-width:775px)
-	{
-		article
-			{
-				max-width: 150px;
-				max-height: 150px;
-			}
-
-		article p
-			{
-				width: 150px;
-			}
-
 		section
 			{
 				width: 80%;
-				margin: 16% 18% 0 18%;
-			}
-
-		.contenedor h2
-			{
-				padding: 32% 0 5% 0;
-			}
-		
+				margin: 3% auto;
+			}		
 	}
 
+@media screen and (max-width:790px)
+	{
+		section
+			{
+				width: 90%;
+				margin: 3% auto;
+			}
+	}
 
-@media screen and (max-width:625px)
+@media screen and (max-width:698px)
 	{
 		article
-			{
-				max-width: 120px;
-				max-height: 120px;
-			}
-
-		article p
 			{
 				width: 120px;
+				height: 120px;
 			}
 
 		section
 			{
-				margin: 25% 18% 0 18%;
+				width: 65%;
+				margin: 20% auto;
 			}
 
-		.contenedor h2
+		.contenedor
 			{
-				padding: 40% 0 5% 0;
+				padding:35% 10%;
 			}
-		
 	}
-
-@media screen and (max-width:480px)
-	{
-		article
-			{
-				max-width: 100px;
-				max-height: 100px;
-			}
-
-		article p
-			{
-				width: 100px;
-			}
-
-		section
-			{
-				width: 80%;
-				margin: 35% 10% 0 18%;
-			}
-
-		.contenedor h2
-			{
-				padding: 50% 0 5% 0;
-			}
-	}  
