@@ -1,22 +1,83 @@
 var a=document.getElementsByTagName("article");
-var bot=[] //Vector de los botones vacio.
-var secuencia=[] //Vector de la secuencia generada por el programa.
-var secuencia2=[] //Vector de la secuencia generada por el programa.
+var bot=[]; //Vector de los botones vacio.
+var sec=[]; //Vector de la secuencia generada por el programa.
+var sec2=[];
+var puntos=0;
+var tiempo;
 for(i=0; i<a.length;i++)
 	{
 		bot.push(a[i]);//Agregamos los botones al vector.
 		a[i].onclick=marcar;//Agrega el evento on click a los articulos.		
 	}
 
-
-
-function secuencia()
+function inicio()
 	{
 		var item = bot[Math.floor(Math.random()*bot.length)];//Elemento conseguido al azar del vector bot.
-		secuencia.push(item); //Agregamos el boton elegido al azar en la secuencia.	
+		sec.push(item); //Agregamos el boton elegido al azar en la secuencia.	
+		copia();
 	}
 
-tiempo=setTimeout(ganar, 3000);
+function copia()
+	{
+		for(i=0; i<sec.length;i++)
+			{
+				sec2.push(sec[i]);//Vector de la secuencia generada por el programa.					
+			}
+		for(i=0; i<sec.length;i++)
+			{
+				if(sec[i].id=="bot1")
+					{
+						console.log("Rojo");
+						sec[i].style.backgroundColor="rgba(255, 0, 0, 1)"
+						tiempoColor=setInterval(apagar,500,i);
+					}
+				if(sec[i].id=="bot2")
+					{
+						console.log("Azul");
+						sec[i].style.backgroundColor="rgba(0, 0, 255, 1)";		
+						tiempoColor=setInterval(apagar,500,i);
+					}
+				if(sec[i].id=="bot3")
+					{
+						console.log("Amarillo");
+						sec[i].style.backgroundColor="rgba(255, 255, 0, 1)";
+						tiempoColor=setInterval(apagar,500,i);
+					}
+				if(sec[i].id=="bot4")
+					{
+						console.log("Verder");
+						sec[i].style.backgroundColor="rgba(0, 255, 0, 1)";	
+						tiempoColor=setInterval(apagar,500,i);
+					}
+			}
+		console.log(sec2); 		
+		tiempo=setTimeout(perder, 3000); //Inicia la cuenta del tiempo y si termina, se dispara la funcion perder.
+	}
+
+function apagar(i)
+	{
+		if(sec[i].id=="bot1")
+			{
+				sec[i].style.backgroundColor="rgba(255, 0, 0, 0.4)";
+				clearTimeout(tiempoColor);
+			}
+		if(sec[i].id=="bot2")
+			{
+				sec[i].style.backgroundColor="rgba(0, 0, 255, 0.4)";		
+				clearTimeout(tiempoColor);
+			}
+		if(sec[i].id=="bot3")
+			{
+				sec[i].style.backgroundColor="rgba(255, 255, 0, 0.4)";
+				clearTimeout(tiempoColor);
+			}
+		if(sec[i].id=="bot4")
+			{
+				sec[i].style.backgroundColor="rgba(0, 255, 0, 0.4)";	
+				clearTimeout(tiempoColor);
+			}
+	}
+
 function marcar(event)
 	{
 		var acc=window.event || event;
@@ -27,18 +88,35 @@ function marcar(event)
 
 function ganar(p)
 	{
-		if (secuencia2[0]==p)
+		if (sec2[0]==p)
 			{
-				alert("Click correcto.");
-				secuencia.pop(0);
-				console.log(secuencia);
-				clearTimeout(tiempo);
+				sec2.shift();
+				console.log(sec2);
+				clearTimeout(tiempo);//Anula el tiempo de de la funcion setTimeout.
+				controlGanar();//Funcion para ver si la secuencia fue terminada o se debe terminar.
 			}
 		else
 			{
-				alert("Perdiste.");
-				clearTimeout(tiempo);
+				perder();
+				clearTimeout(tiempo);//Anula el tiempo de de la funcion setTimeout.
 			}
 	}
-//tiempo=setTimeout(function(){ alert("Hello"); }, 3000); //define un tiempo limite.
-//clearTimeout(tiempo);//Anula el tiempo de de la funcion setTimeout.
+
+function controlGanar()
+	{
+		if(sec2.length==0)
+			{
+				puntos=puntos+1;
+				inicio();
+			}
+		else
+			{
+				tiempo=setTimeout(perder, 3000);//Re-inicia la cuenta del tiempo y si termina, se dispara la funcion perder.
+			}
+	}
+
+function perder()
+	{
+		alert("Perdiste");
+		console.log(puntos);
+	}
