@@ -126,7 +126,7 @@ function inicio()
 					{
 						puntos=puntos+1;
 						temp=0;
-						cargar();
+						setTimeout(cargar,500);
 					}
 				else
 					{
