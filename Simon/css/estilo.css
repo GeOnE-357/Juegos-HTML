@@ -79,16 +79,34 @@ article#bot4:hover{background: rgba(0, 255, 0, 1);}
 	padding:130px 10%;
 	background-color: rgba(0,0,0,0.5);
 	text-align: center;
-	/*display: none;*/
+	font-family: 'Helvetica', bold;
 	}
 
 .contenedor h2
 	{
 		 font-size: 80px;
 		 width: 80%;
-		 font-family: 'Helvetica', bold;
 		 color: white;
 
+	}
+
+.contenedor p
+	{
+		color: white;
+		display: inline-block;
+		width: 80%;
+		text-align: center;
+	}
+
+.contenedor p a
+	{
+		color: white;
+		font-weight: bold;
+	}
+
+.contenedor p a:hover
+	{
+		color:yellow;
 	}
 
 .contenedor input
@@ -98,7 +116,6 @@ article#bot4:hover{background: rgba(0, 255, 0, 1);}
 		float: left;
 		margin: 3% 25%;
 		padding: 2%;
-		font-family: 'Helvetica', bold;
 		border-radius: 20px;
 		background-color: rgba(0,255,0,0.3);
 		color: white;
