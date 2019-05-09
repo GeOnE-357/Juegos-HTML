@@ -1,3 +1,5 @@
+var ini=document.getElementsByTagName("input")[0];
+ini.onclick=inicio;
 function inicio()
 	{
 		var a=document.getElementsByTagName("article");
@@ -7,11 +9,13 @@ function inicio()
 		var puntos=0;
 		var temp=0;
 		var tiempo;
+		ban=0;
 		for(i=0; i<a.length;i++)
 			{
 				bot.push(a[i]);//Agregamos los botones al vector.
-				a[i].onclick=marcar;//Agrega el evento on click a los articulos.		
+				a[i].onclick=marcar;//Agrega el evento on click a los articulos.
 			}
+		menu();
 		cargar();
 
 		function cargar()
@@ -46,25 +50,31 @@ function inicio()
 					{
 						console.log("Rojo");
 						sec[i].style.backgroundColor="rgba(255, 0, 0, 1)"
+						sonido("audio/NFF-menu-03-a.wav");
 						tiempoColor=setTimeout(apagar,500,i);
 					}
 				if(sec[i].id=="bot2")
 					{
 						console.log("Azul");
 						sec[i].style.backgroundColor="rgba(0, 0, 255, 1)";		
+						sonido("audio/NFF-menu-03-b.wav");
 						tiempoColor=setTimeout(apagar,500,i);
 					}
 				if(sec[i].id=="bot3")
 					{
 						console.log("Amarillo");
 						sec[i].style.backgroundColor="rgba(255, 255, 0, 1)";
+						sonido("audio/NFF-menu-03-b.wav");
 						tiempoColor=setTimeout(apagar,500,i);
+						
 					}
 				if(sec[i].id=="bot4")
 					{
 						console.log("Verder");
 						sec[i].style.backgroundColor="rgba(0, 255, 0, 1)";	
+						sonido("audio/NFF-menu-03-a.wav");
 						tiempoColor=setTimeout(apagar,500,i);
+						
 					}
 			}
 
@@ -136,7 +146,30 @@ function inicio()
 
 		function perder()
 			{
-				alert("Perdiste");
-				console.log(puntos);
+				sonido("audio/NFF-cancel-04.wav")
+				ban=1;
+				menu();
+			}
+
+		function menu()
+			{
+				var cont=document.getElementsByClassName("contenedor")[0];
+				var h2=document.getElementsByTagName("h2")[0];
+				if (ban==0) 	 	
+					{
+						cont.style.display="none";
+					}
+				if (ban==1)
+					{
+						cont.style.display="block";
+						h2.innerHTML="Tu puntaje: "+puntos;
+						ini.value="Reiniciar";
+					}
+			}
+		function sonido(url)
+			{
+				var sonido = new Audio();
+				sonido.src=url;
+				sonido.play();
 			}
 	}
