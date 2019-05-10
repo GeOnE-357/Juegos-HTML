@@ -16,7 +16,7 @@ function inicio()
 				a[i].onclick=marcar;//Agrega el evento on click a los articulos.
 			}
 		menu();
-		cargar();
+		setTimeout(cargar,1000);
 
 		function cargar()
 			{
@@ -48,21 +48,18 @@ function inicio()
 				i=pos;
 				if(sec[i].id=="bot1")
 					{
-						console.log("Rojo");
-						sec[i].style.backgroundColor="rgba(255, 0, 0, 1)"
+						sec[i].style.backgroundColor="rgba(255, 0, 0, 1)";
 						sonido("audio/NFF-menu-03-a.wav");
 						tiempoColor=setTimeout(apagar,500,i);
 					}
 				if(sec[i].id=="bot2")
 					{
-						console.log("Azul");
 						sec[i].style.backgroundColor="rgba(0, 0, 255, 1)";		
 						sonido("audio/NFF-menu-03-b.wav");
 						tiempoColor=setTimeout(apagar,500,i);
 					}
 				if(sec[i].id=="bot3")
 					{
-						console.log("Amarillo");
 						sec[i].style.backgroundColor="rgba(255, 255, 0, 1)";
 						sonido("audio/NFF-menu-03-b.wav");
 						tiempoColor=setTimeout(apagar,500,i);
@@ -70,7 +67,6 @@ function inicio()
 					}
 				if(sec[i].id=="bot4")
 					{
-						console.log("Verder");
 						sec[i].style.backgroundColor="rgba(0, 255, 0, 1)";	
 						sonido("audio/NFF-menu-03-a.wav");
 						tiempoColor=setTimeout(apagar,500,i);
@@ -110,8 +106,15 @@ function inicio()
 			{
 				var acc=window.event || event;
 				var pos = acc.target || acc.srcElement;
-				var p=document.getElementById(pos.id);
-				ganar(p);		
+				if(pos.id=="bot1" || pos.id=="bot4")
+					{
+						sonido("audio/NFF-menu-03-a.wav");
+					}
+				else
+					{
+						sonido("audio/NFF-menu-03-b.wav");
+					}
+				ganar(pos);		
 			}
 
 		function ganar(p)
@@ -119,7 +122,6 @@ function inicio()
 				if (sec2[0]==p)
 					{
 						sec2.shift();
-						console.log(sec2);
 						clearTimeout(tiempo);//Anula el tiempo de de la funcion setTimeout.
 						controlGanar();//Funcion para ver si la secuencia fue terminada o se debe terminar.
 					}
@@ -136,7 +138,7 @@ function inicio()
 					{
 						puntos=puntos+1;
 						temp=0;
-						setTimeout(cargar,500);
+						setTimeout(cargar,1000);
 					}
 				else
 					{
