@@ -60,11 +60,6 @@ article#bot4
      	border-radius: 0 0 100% 0;
 	}
 
-article#bot1:hover{background: rgba(255, 0, 0, 4);width:290px;height:290px;}
-article#bot2:hover{background: rgba(0, 0, 255, 4);width:290px;height:290px;}
-article#bot3:hover{background: rgba(255, 255, 0, 4);width:290px;height:290px;margin:0 0 10px 10px;}
-article#bot4:hover{background: rgba(0, 255, 0, 4);width:290px;height:290px;margin:0 10px 10px 0;}
-
 /* --------------- CONTENEDOR MENSAJE */
 
 .contenedor

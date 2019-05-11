@@ -32,7 +32,7 @@ function inicio()
 						if(sec[i]!=sec2[i])
 							{
 								sec2.push(sec[i]);//Vector de la secuencia generada por el programa.												
-								color(i);
+								colorSec(i);
 								temp=i;
 								break;
 							}				
@@ -43,38 +43,38 @@ function inicio()
 					}
 			}
 
-		function color(pos)
+		function colorSec(pos)
 			{
 				i=pos;
 				if(sec[i].id=="bot1")
 					{
 						sec[i].style.backgroundColor="rgba(255, 0, 0, 1)";
-						sonido("audio/NFF-menu-03-a.wav");
-						tiempoColor=setTimeout(apagar,500,i);
+						sonido("audio/Bot1.mp3");
+						tiempoColor=setTimeout(apagarSec,500,i);
 					}
 				if(sec[i].id=="bot2")
 					{
 						sec[i].style.backgroundColor="rgba(0, 0, 255, 1)";		
-						sonido("audio/NFF-menu-03-b.wav");
-						tiempoColor=setTimeout(apagar,500,i);
+						sonido("audio/Bot2.mp3");
+						tiempoColor=setTimeout(apagarSec,500,i);
 					}
 				if(sec[i].id=="bot3")
 					{
 						sec[i].style.backgroundColor="rgba(255, 255, 0, 1)";
-						sonido("audio/NFF-menu-03-b.wav");
-						tiempoColor=setTimeout(apagar,500,i);
+						sonido("audio/Bot3.mp3");
+						tiempoColor=setTimeout(apagarSec,500,i);
 						
 					}
 				if(sec[i].id=="bot4")
 					{
 						sec[i].style.backgroundColor="rgba(0, 255, 0, 1)";	
-						sonido("audio/NFF-menu-03-a.wav");
-						tiempoColor=setTimeout(apagar,500,i);
+						sonido("audio/Bot4.mp3");
+						tiempoColor=setTimeout(apagarSec,500,i);
 						
 					}
 			}
 
-		function apagar(i)
+		function apagarSec(i)
 			{
 				if(sec[i].id=="bot1")
 					{
@@ -106,15 +106,56 @@ function inicio()
 			{
 				var acc=window.event || event;
 				var pos = acc.target || acc.srcElement;
-				if(pos.id=="bot1" || pos.id=="bot4")
+				if(pos.id=="bot1")
 					{
-						sonido("audio/NFF-menu-03-a.wav");
+						pos.style.backgroundColor="rgba(255, 0, 0, 1)";
+						apagarColor=setTimeout(apagarMarc,500,pos);
+						sonido("audio/Bot1.mp3");
 					}
-				else
+				if(pos.id=="bot2")
 					{
-						sonido("audio/NFF-menu-03-b.wav");
+						pos.style.backgroundColor="rgba(0, 0, 255, 1)";
+						apagarColor=setTimeout(apagarMarc,500,pos);
+						sonido("audio/Bot2.mp3");
+					}
+				if(pos.id=="bot3")
+					{
+						pos.style.backgroundColor="rgba(255, 255, 0, 1)";
+						apagarColor=setTimeout(apagarMarc,500,pos);
+						sonido("audio/Bot3.mp3");
+					}
+				if(pos.id=="bot4")
+					{
+						pos.style.backgroundColor="rgba(0, 255, 0, 1)";
+						apagarColor=setTimeout(apagarMarc,500,pos);
+						sonido("audio/Bot4.mp3");
 					}
 				ganar(pos);		
+			}
+
+		function apagarMarc(pos)
+			{
+				botPos=pos
+				if(botPos.id=="bot1")
+					{
+						botPos.style.backgroundColor="";
+						clearTimeout(apagarColor);
+					}
+				if(botPos.id=="bot2")
+					{
+						botPos.style.backgroundColor="";		
+						clearTimeout(apagarColor);
+					}
+				if(botPos.id=="bot3")
+					{
+						botPos.style.backgroundColor="";
+						clearTimeout(apagarColor);
+					}
+				if(botPos.id=="bot4")
+					{
+						botPos.style.backgroundColor="";	
+						clearTimeout(apagarColor);
+					}
 			}
 
 		function ganar(p)
@@ -148,7 +189,7 @@ function inicio()
 
 		function perder()
 			{
-				sonido("audio/NFF-cancel-04.wav")
+				sonido("audio/Perder.mp3")
 				ban=1;
 				menu();
 			}
