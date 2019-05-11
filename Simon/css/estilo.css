@@ -71,7 +71,7 @@ article#bot4
 	right: 0;
 	left: 0;
 	bottom: 0;
-	padding:130px 10%;
+	padding:180px 10%;
 	background-color: rgba(0,0,0,0.5);
 	text-align: center;
 	font-family: 'Helvetica', bold;
@@ -135,5 +135,49 @@ article#bot4
 		body
 			{
 				padding: 100px 0;
+			}
+
+		.contenedor
+			{
+				padding: 240px 10%;
+			}
+
+		.contenedor h2
+			{
+		 		font-size: 60px;
+			}
+
+		.contenedor input
+			{
+				font-size: 30px;
+			}
+	}
+
+@media screen and (max-width:400px)
+	{
+		article#bot1, article#bot2, article#bot3, article#bot4
+			{
+				width: 180px; 
+     			height: 180px;
+			}
+
+		body
+			{
+				padding: 140px 0;
+			}
+
+		.contenedor
+			{
+				padding: 240px 10%;
+			}
+
+		.contenedor h2
+			{
+		 		font-size: 40px;
+			}
+
+		.contenedor input
+			{
+				font-size: 20px;
 			}
 	}
