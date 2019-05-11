@@ -76,30 +76,9 @@ function inicio()
 
 		function apagarSec(i)
 			{
-				if(sec[i].id=="bot1")
-					{
-						sec[i].style.backgroundColor="";
-						clearTimeout(tiempoColor);
-						setTimeout(copia,200);
-					}
-				if(sec[i].id=="bot2")
-					{
-						sec[i].style.backgroundColor="";		
-						clearTimeout(tiempoColor);
-						setTimeout(copia,200);
-					}
-				if(sec[i].id=="bot3")
-					{
-						sec[i].style.backgroundColor="";
-						clearTimeout(tiempoColor);
-						setTimeout(copia,200);
-					}
-				if(sec[i].id=="bot4")
-					{
-						sec[i].style.backgroundColor="";	
-						clearTimeout(tiempoColor);
-						setTimeout(copia,200);
-					}
+				sec[i].style.backgroundColor="";
+				clearTimeout(tiempoColor);
+				setTimeout(copia,200);
 			}
 
 		function marcar(event)
@@ -136,26 +115,8 @@ function inicio()
 		function apagarMarc(pos)
 			{
 				botPos=pos
-				if(botPos.id=="bot1")
-					{
-						botPos.style.backgroundColor="";
-						clearTimeout(apagarColor);
-					}
-				if(botPos.id=="bot2")
-					{
-						botPos.style.backgroundColor="";		
-						clearTimeout(apagarColor);
-					}
-				if(botPos.id=="bot3")
-					{
-						botPos.style.backgroundColor="";
-						clearTimeout(apagarColor);
-					}
-				if(botPos.id=="bot4")
-					{
-						botPos.style.backgroundColor="";	
-						clearTimeout(apagarColor);
-					}
+				botPos.style.backgroundColor="";
+				clearTimeout(apagarColor);
 			}
 
 		function ganar(p)
