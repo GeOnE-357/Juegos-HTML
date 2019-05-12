@@ -78,7 +78,7 @@ function inicio()
 			{
 				sec[i].style.backgroundColor="";
 				clearTimeout(tiempoColor);
-				setTimeout(copia,200);
+				tiempoSec=setTimeout(copia,200);
 			}
 
 		function marcar(event)
@@ -129,8 +129,8 @@ function inicio()
 					}
 				else
 					{
-						perder();
 						clearTimeout(tiempo);//Anula el tiempo de de la funcion setTimeout.
+						perder();
 					}
 			}
 
@@ -140,7 +140,7 @@ function inicio()
 					{
 						puntos=puntos+1;
 						temp=0;
-						setTimeout(cargar,1000);
+						tiempoCargar=setTimeout(cargar,1000);
 					}
 				else
 					{
@@ -153,6 +153,17 @@ function inicio()
 				sonido("audio/Perder.mp3")
 				ban=1;
 				menu();
+				for(i=0;i<4;i++)
+					{
+						if(bot[i].style.backgroundColor!="")
+							{
+								apagarMarc(bot[i]);		
+							}
+					}
+				if(tiempo){clearTimeout(tiempo);};
+				if(sec.length>1){clearTimeout(tiempoColor);};
+				if(sec.length>1){clearTimeout(tiempoSec);};
+				if(sec.length>1){clearTimeout(tiempoCargar);};
 			}
 
 		function menu()
