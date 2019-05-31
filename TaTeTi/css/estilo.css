@@ -24,7 +24,7 @@ h2, p
 section
 	{
 		width: 600px;
-		margin: 2% auto;
+		margin: 4% auto;
 	}
 
 article
@@ -77,7 +77,7 @@ p.X
 	right: 0;
 	left: 0;
 	bottom: 0;
-	padding:130px 10%;
+	padding:200px 8%;
 	background-color: rgba(0,0,0,0.5);
 	text-align: center;
 	/*display: none;*/
@@ -112,6 +112,16 @@ p.X
 		background-color: rgba(32,124,17,1);
 	}
 
+@media screen and (max-width:900px)
+	{
+		section
+			{
+				margin: 8% auto;
+			}
+
+
+	}
+
 @media screen and (max-width:620px)
 	{
 
@@ -136,10 +146,5 @@ p.X
 		.contenedor input
 			{
 				font-size: 25px;
-			}
-
-		.contenedor
-			{
-				padding: 200px 10%;
 			}
 	}
