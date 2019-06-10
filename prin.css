@@ -1,0 +1,31 @@
+*
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+body{
+	background-color: black;
+}
+
+
+a
+	{
+		display:block;
+		width: 40%;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 20px;
+		padding: 3%;
+		font-size: 3em;
+		color: white;
+		font-weight: bold;
+		font-family: Arial;
+		background-color: rgba(125,0,0,1);
+		margin: 5% auto;
+	}
+
+a:hover
+	{
+		background-color: rgba(125,0,0,0.3);
+	}
