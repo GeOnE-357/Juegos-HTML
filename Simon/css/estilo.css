@@ -16,6 +16,9 @@ section
 		height: 48%;
 		padding: 1%;
 		display: inline-block;
+    	transform: translate(5%, 5%);
+    	z-index: -1;
+    	-webkit-transform: translate(5%, 5%);
 	}
 
 article#bot1
@@ -73,6 +76,7 @@ article#bot4
 	bottom: 0;
 	padding:180px 10%;
 	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
 	text-align: center;
 	font-family: 'Helvetica', bold;
 	}
