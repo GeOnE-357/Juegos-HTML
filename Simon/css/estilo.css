@@ -16,9 +16,14 @@ section
 		height: 48%;
 		padding: 1%;
 		display: inline-block;
-    	transform: translate(5%, 5%);
     	z-index: -1;
-    	-webkit-transform: translate(5%, 5%);
+	}
+
+div.prin
+	{
+		width: 80%;
+		height: 80%;
+		margin: 1% auto;
 	}
 
 article#bot1
@@ -70,11 +75,7 @@ article#bot4
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	padding:180px 10%;
+	padding:20% 10%;
 	background-color: rgba(0,0,0,0.5);
 	z-index: 1;
 	text-align: center;
@@ -128,7 +129,7 @@ article#bot4
 	}
 
 
-@media screen and (max-width:620px)
+@media screen and (max-width:300px)
 	{
 		article#bot1, article#bot2, article#bot3, article#bot4
 			{
@@ -136,14 +137,11 @@ article#bot4
      			height: 220px;
 			}
 
-		body
+		div.prin
 			{
-				padding: 100px 0;
-			}
-
-		.contenedor
-			{
-				padding: 240px 10%;
+				width: 90%;
+				height: 90%;
+				margin: auto;
 			}
 
 		.contenedor h2
@@ -154,34 +152,5 @@ article#bot4
 		.contenedor input
 			{
 				font-size: 30px;
-			}
-	}
-
-@media screen and (max-width:400px)
-	{
-		article#bot1, article#bot2, article#bot3, article#bot4
-			{
-				width: 180px; 
-     			height: 180px;
-			}
-
-		body
-			{
-				padding: 140px 0;
-			}
-
-		.contenedor
-			{
-				padding: 240px 10%;
-			}
-
-		.contenedor h2
-			{
-		 		font-size: 40px;
-			}
-
-		.contenedor input
-			{
-				font-size: 20px;
 			}
 	}
