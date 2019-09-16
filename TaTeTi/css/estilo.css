@@ -2,6 +2,7 @@
 	{
 		margin: 0;
 		padding: 0;
+		transition: all 0.5s;
 	}
 
 @font-face 
@@ -21,24 +22,22 @@ h2, p
 		text-align: center;
 	}
 
-section
+body > section
 	{
-		width: 600px;
-		margin: 4% auto;
+		display: grid;
+		grid-template-columns: repeat(3, 100px);
+		grid-template-rows: repeat(3, 100px);
+		grid-gap: 5px;
+		max-width: 310px;
+		margin: 155px auto 0;
 	}
 
 article
 	{
-		float: left;
-		width: 180px;
-		height: 180px;
-		margin: 0 1% 0.5% 0; 
-		display: inline-block;
 		background-color: rgba(255,255,255,0.4);
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		border-color: white;
-		font-size: 100px;
 	}
 
 article:hover
@@ -46,19 +45,20 @@ article:hover
 		background-color: rgba(255,255,255,0.7);
 	}
 
-article p
+article > p
 	{
 		text-align: center;
-		width: 100%;
-		height: 180px;
-		padding: 10px 0 0 0;
-		display: inline-block;
+		display: block;
+		width: 100px;
+		height: 60px;
+		padding: 20px 0;
+		font-size: 50px;
+		
 	}
 
 p.O
 	{
 		color: red;
-		 
 	}
 
 p.X
@@ -70,35 +70,39 @@ p.X
 
 .contenedor
 	{
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	right: 0;
 	left: 0;
 	bottom: 0;
-	padding:200px 8%;
 	background-color: rgba(0,0,0,0.5);
-	text-align: center;
+	display: grid;
+	grid-template-areas: ". . . . . ."
+						". . . . . ."
+						". . titulo titulo . ."
+						". . boton boton . ."
+						". . . . . ."
+						". . . . . ."
+						". . . . . .";
 	/*display: none;*/
 	}
 
-.contenedor h2
+.contenedor > h2
 	{
-		 font-size: 80px;
-		 width: 80%;
+		 font-size: 50px;
+		 grid-area: titulo;
 		 font-family: 'Permanent Marker', cursive;
 		 color: white;
-
+		 align-self: center;
 	}
 
-.contenedor input
+.contenedor > input
 	{
-		font-size: 50px;
-		width: 30%;
-		float: left;
-		margin: 0 25%;
-		padding: 2%;
+		grid-area: boton;
+		font-size: 30px;
+		padding: 5px;
 		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		background-color: rgba(0,255,0,0.5);
@@ -112,39 +116,22 @@ p.X
 		background-color: rgba(32,124,17,1);
 	}
 
-@media screen and (max-width:900px)
+@media screen and (min-width:600px)
 	{
-		section
+		body > section
 			{
-				margin: 8% auto;
-			}
+				grid-template-columns: repeat(3, 150px);
+				grid-template-rows: repeat(3, 150px);
+				grid-gap: 5px;
+				max-width: 460px;
+				margin: 100px auto 0;
+			}		
 
-
-	}
-
-@media screen and (max-width:620px)
-	{
-
-		article
+		article > p
 			{
-				width: 100px;
+				width: 150px;
 				height: 100px;
-				font-size: 50px;
-			}
-
-		section
-			{
-				width:320px;
-				margin: 35% auto;
-			}
-
-		.contenedor h2
-			{
-				font-size: 40px;
-			}
-
-		.contenedor input
-			{
-				font-size: 25px;
+				padding: 25px 0;
+				font-size: 100px;
 			}
 	}

@@ -230,7 +230,7 @@ function principal()
 					}
 				if (ban==3)
 					{
-						cont.style.display="block";
+						cont.style.display="grid";
 						h2.innerHTML="Gano "+sim.innerHTML+"!"; 	
 						ban=0;
 						var input=document.getElementsByTagName("input")[0];
@@ -238,7 +238,7 @@ function principal()
 					}
 				if(ban==4)
 					{
-						cont.style.display="block";
+						cont.style.display="grid";
 						h2.innerHTML="Empate!"; 	
 						ban=0;
 						emp=0;
@@ -254,7 +254,7 @@ function principal()
 							{
 								fila[i].innerHTML="";
 								fila[i].className="";
-								fila[i].parentNode.style.backgroundColor="rgba(255,255,255,0.4)";
+								fila[i].parentNode.style.backgroundColor="";
 							}
 				var cont=document.getElementsByClassName("contenedor")[0];
 				cont.style.display="none";
