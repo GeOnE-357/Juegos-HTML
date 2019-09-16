@@ -1,36 +1,28 @@
 *
 	{
-		margin: 0;
 		padding: 0;
+		margin: 0;
+		transition: all 0.5s;
 	}
 
 body
 	{
 		background-color: black;
-		height: 100%;
 	}
 
-section
+body > div.prin
 	{
-		width: 48%;
-		height: 48%;
-		padding: 1%;
-		display: inline-block;
-    	z-index: -1;
-	}
-
-div.prin
-	{
-		width: 80%;
-		height: 80%;
-		margin: 1% auto;
+		display: grid;
+		grid-template-rows:150px 150px;
+		grid-template-columns:150px 150px;
+		grid-gap: 5px;
+		margin: 155px auto;
 	}
 
 article#bot1
 	{
-		float: right;
-		width: 300px; 
-     	height: 300px;  
+		width: 150px; 
+     	height: 150px;  
      	background: rgba(255, 0, 0, 0.3);
      	-moz-border-radius: 100% 0 0 0;
      	-webkit-border-radius: 100% 0 0 0;
@@ -39,8 +31,8 @@ article#bot1
 
 article#bot2
 	{
-		width: 300px; 
-     	height: 300px;  
+		width: 150px; 
+     	height: 150px;  
      	background: rgba(0, 0, 255, 0.3);
      	-moz-border-radius: 0 100% 0 0;
      	-webkit-border-radius: 0 100% 0 0;
@@ -49,9 +41,8 @@ article#bot2
 
 article#bot3
 	{
-		float: right;
-		width: 300px; 
-     	height: 300px;  
+		width: 150px; 
+     	height: 150px;  
      	background: rgba(255, 255, 0, 0.3);
      	-moz-border-radius: 0 0 0 100%;
      	-webkit-border-radius: 0 0 0 100%;
@@ -60,97 +51,85 @@ article#bot3
 
 article#bot4
 	{
-		width: 300px; 
-     	height: 300px;  
+		width: 150px; 
+     	height: 150px;  
      	background: rgba(0, 255, 0, 0.3);
      	-moz-border-radius: 0 0 100% 0;
      	-webkit-border-radius: 0 0 100% 0;
      	border-radius: 0 0 100% 0;
 	}
 
-/* --------------- CONTENEDOR MENSAJE */
+/*------------ CONTENEDOR DE MENSAJE ------------*/
 
 .contenedor
 	{
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding:20% 10%;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
-	z-index: 1;
-	text-align: center;
-	font-family: 'Helvetica', bold;
+	display: grid;
+	grid-template-areas: ". . . . . ."
+						". . . . . ."
+						". . titulo titulo . ."
+						". . boton boton . ."
+						". . . mensaje . ."
+						". . . . . ."
+						". . . . . .";
+	/*display: none;*/
 	}
 
-.contenedor h2
+.contenedor > h2
 	{
-		 font-size: 80px;
-		 width: 80%;
+		 font-size: 50px;
+		 grid-area: titulo;
+		 font-family: 'Permanent Marker', cursive;
 		 color: white;
-
+		 align-self: center;
+		 text-align:center;
 	}
 
-.contenedor p
+.contenedor > input
 	{
-		color: white;
-		display: inline-block;
-		width: 80%;
-		text-align: center;
-	}
-
-.contenedor p a
-	{
-		color: white;
-		font-weight: bold;
-	}
-
-.contenedor p a:hover
-	{
-		color:yellow;
-	}
-
-.contenedor input
-	{
-		font-size: 50px;
-		width: 30%;
-		float: left;
-		margin: 3% 25%;
-		padding: 2%;
+		grid-area: boton;
+		font-size: 30px;
+		padding: 5px;
+		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
-		background-color: rgba(0,255,0,0.3);
+		background-color: rgba(0,255,0,0.5);
 		color: white;
 		border:none;
 	    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
 	}
 
-.contenedor input:hover
+.contenedor > input:hover
 	{
 		background-color: rgba(32,124,17,1);
 	}
 
-
-@media screen and (max-width:300px)
+.contenedor > p
 	{
-		article#bot1, article#bot2, article#bot3, article#bot4
-			{
-				width: 220px; 
-     			height: 220px;
-			}
+		color: white;
+		grid-area: mensaje;
+		text-align: center;
+	}
 
-		div.prin
-			{
-				width: 90%;
-				height: 90%;
-				margin: auto;
-			}
+.contenedor > p > a
+	{
+		color: white;
+		font-weight: bold;
+	}
 
-		.contenedor h2
-			{
-		 		font-size: 60px;
-			}
+.contenedor > p > a:hover
+	{
+		color:yellow;
+	}
 
-		.contenedor input
-			{
-				font-size: 30px;
-			}
+
+@media screen and (min-width:600px)
+	{
+		
 	}

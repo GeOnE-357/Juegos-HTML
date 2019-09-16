@@ -4,3 +4,5 @@
   <li>SIMON DICE: Finalizado</li>
   <li>CLON DINOSAURIO CORRE: Por empezar...</li>
 </ul>
+
+<p>Podes probar los juegos <a href="https://geone-357.github.io/Juegos-HTML/">aqui</a></p>
