@@ -168,7 +168,7 @@ function inicio()
 					}
 				if (ban==1)
 					{
-						cont.style.display="block"; //Cambia el estilo del contenedor a visible.
+						cont.style.display="grid"; //Cambia el estilo del contenedor a visible.
 						h2.innerHTML="Tu puntaje: "+puntos; //Muestra el puntaje en el titulo del contenedor.
 						ini.value="Reiniciar"; //Asigna al boton una nueva palabra dentro.
 					}

@@ -8,15 +8,17 @@
 body
 	{
 		background-color: black;
+		font-family: 'Roboto', sans-serif;
 	}
 
-body > div.prin
+body > section.prin
 	{
 		display: grid;
 		grid-template-rows:150px 150px;
 		grid-template-columns:150px 150px;
 		grid-gap: 5px;
-		margin: 155px auto;
+		max-width: 305px;
+		margin: 110px auto 0;
 	}
 
 article#bot1
@@ -79,14 +81,12 @@ article#bot4
 						". . . mensaje . ."
 						". . . . . ."
 						". . . . . .";
-	/*display: none;*/
 	}
 
 .contenedor > h2
 	{
 		 font-size: 50px;
 		 grid-area: titulo;
-		 font-family: 'Permanent Marker', cursive;
 		 color: white;
 		 align-self: center;
 		 text-align:center;
@@ -97,7 +97,6 @@ article#bot4
 		grid-area: boton;
 		font-size: 30px;
 		padding: 5px;
-		font-family: 'Permanent Marker', cursive;
 		border-radius: 20px;
 		background-color: rgba(0,255,0,0.5);
 		color: white;
@@ -131,5 +130,29 @@ article#bot4
 
 @media screen and (min-width:600px)
 	{
-		
+		body > section.prin
+			{
+				grid-template-rows:250px 250px;
+				grid-template-columns:250px 250px;
+				grid-gap: 5px;
+				max-width: 505px;
+				margin: 50px auto 0;
+			}
+
+		article#bot1, article#bot2, article#bot3, article#bot4
+			{
+				width: 250px;
+				height: 250px;
+			}
+
+		.contenedor
+			{
+				grid-template-areas: ". . . . . . . ."
+									". . . . . . . ."
+									". . . titulo titulo . . ."
+									". . . boton boton . . ."
+									". . . . mensaje . . ."
+									". . . . . . . ."
+									". . . . . . . .";
+			}
 	}
