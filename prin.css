@@ -5,24 +5,27 @@
 	}
 
 body{
-	background-color: black;
-}
+		background-color: black;
+		display: grid;
+		grid-template-rows: repeat(auto-fill,minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));;
+		align-items: center;
+	}
 
 
 a
 	{
-		display:block;
-		width: 40%;
 		text-align: center;
 		text-decoration: none;
 		border-radius: 20px;
-		padding: 3%;
-		font-size: 3em;
+		padding: 40px 5px;
+		line-height: 30px;
+		font-size: 30px;
 		color: white;
 		font-weight: bold;
 		font-family: Arial;
 		background-color: rgba(125,0,0,1);
-		margin: 5% auto;
+		margin: 10px;
 	}
 
 a:hover
