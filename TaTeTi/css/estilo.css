@@ -9,6 +9,8 @@ body
 	{
 		background-color: #EDC10D;
 		font-family: 'Roboto', sans-serif;
+		min-height: 100vh;
+		display: grid;
 	}
 
 h2, p
@@ -23,7 +25,7 @@ body > section
 		grid-template-rows: repeat(3, 100px);
 		grid-gap: 5px;
 		max-width: 310px;
-		margin: 75px auto 0;
+		margin: auto;
 	}
 
 article
@@ -114,7 +116,6 @@ p.X
 				grid-template-rows: repeat(3, 150px);
 				grid-gap: 5px;
 				max-width: 460px;
-				margin: 100px auto 0;
 			}		
 
 		article > p
