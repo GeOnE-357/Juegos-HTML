@@ -9,6 +9,8 @@ body
 	{
 		background-color: black;
 		font-family: 'Roboto', sans-serif;
+		display: grid;
+		min-height: 100vh;
 	}
 
 body > section.prin
@@ -18,7 +20,7 @@ body > section.prin
 		grid-template-columns:150px 150px;
 		grid-gap: 5px;
 		max-width: 305px;
-		margin: 110px auto 0;
+		margin: auto;
 	}
 
 article#bot1
@@ -136,7 +138,6 @@ article#bot4
 				grid-template-columns:250px 250px;
 				grid-gap: 5px;
 				max-width: 505px;
-				margin: 50px auto 0;
 			}
 
 		article#bot1, article#bot2, article#bot3, article#bot4
