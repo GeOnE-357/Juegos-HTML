@@ -3,7 +3,7 @@
 	"__name":"Nombre largo del Splash.",
 	"short_name":"Tateti",
 	"__short_name":"Nombre corto de abajo del icono.",
-	"start_url":"/index.html",
+	"start_url":"https://geone-357.github.io/Juegos-HTML/TaTeTi/tateti.html",
 	"__start_url":"EL archivo html donde empieza.",
 	"display":"standalone",
 	"__display":"Como se abre en la pantalla, se abre sin barra de navegacion. browser lo abre como un navegador comun.",
