@@ -14,12 +14,12 @@
 	"__orientation":"Se va a abrir en modo retrato.",
 	"icons":[
 		{
-			"src":"/img/icons/icon-72x72.png",
+			"src":"/img/icon-72x72.png",
 			"type":"image/png",
 			"sizes":"72x72"
 		},
 		{
-			"src":"/img/icons/icon-144x144.png",
+			"src":"/img/icon-144x144.png",
 			"type":"image/png",
 			"sizes":"144x144"
 		}
