@@ -14,9 +14,9 @@
 	"__orientation":"Se va a abrir en modo retrato.",
 	"icons":[
 		{
-			"src":"img/icon-72x72.png",
+			"src":"img/icon-96x96.png",
 			"type":"image/png",
-			"sizes":"72x72"
+			"sizes":"96x96"
 		},
 		{
 			"src":"img/icon-144x144.png",
